@@ -1,0 +1,130 @@
+./a.out
+Processes:
+A of length 3 arriving at time 0
+B of length 2 arriving at time 0
+C of length 1 arriving at time 0
+
+Base execution timeline: AAABBC
+720 / 12 = 60 total permutations:
+AAABBC valid
+AAABCB valid
+AAACBB valid
+AABABC valid
+AABACB valid
+AABBAC valid
+AABBCA valid
+AABCAB valid
+AABCBA valid
+AACABB valid
+AACBAB valid
+AACBBA valid
+ABAABC valid
+ABAACB valid
+ABABAC valid
+ABABCA valid
+ABACAB valid
+ABACBA valid
+ABBAAC valid
+ABBACA valid
+ABBCAA valid
+ABCAAB valid
+ABCABA valid
+ABCBAA valid
+ACAABB valid
+ACABAB valid
+ACABBA valid
+ACBAAB valid
+ACBABA valid
+ACBBAA valid
+BAAABC valid
+BAAACB valid
+BAABAC valid
+BAABCA valid
+BAACAB valid
+BAACBA valid
+BABAAC valid
+BABACA valid
+BABCAA valid
+BACAAB valid
+BACABA valid
+BACBAA valid
+BBAAAC valid
+BBAACA valid
+BBACAA valid
+BBCAAA valid
+BCAAAB valid
+BCAABA valid
+BCABAA valid
+BCBAAA valid
+CAAABB valid
+CAABAB valid
+CAABBA valid
+CABAAB valid
+CABABA valid
+CABBAA valid
+CBAAAB valid
+CBAABA valid
+CBABAA valid
+CBBAAA valid
+
+60 Valid Timelines:
+AAABBC: avgTT = 4.667
+AAABCB: avgTT = 4.667
+AAACBB: avgTT = 4.333
+AABABC: avgTT = 5.000
+AABACB: avgTT = 5.000
+AABBAC: avgTT = 5.000
+AABBCA: avgTT = 5.000
+AABCAB: avgTT = 5.000
+AABCBA: avgTT = 5.000
+AACABB: avgTT = 4.333
+AACBAB: avgTT = 4.667
+AACBBA: avgTT = 4.667
+ABAABC: avgTT = 5.000
+ABAACB: avgTT = 5.000
+ABABAC: avgTT = 5.000
+ABABCA: avgTT = 5.000
+ABACAB: avgTT = 5.000
+ABACBA: avgTT = 5.000
+ABBAAC: avgTT = 4.667
+ABBACA: avgTT = 4.667
+ABBCAA: avgTT = 4.333
+ABCAAB: avgTT = 4.667
+ABCABA: avgTT = 4.667
+ABCBAA: avgTT = 4.333
+ACAABB: avgTT = 4.000
+ACABAB: avgTT = 4.333
+ACABBA: avgTT = 4.333
+ACBAAB: avgTT = 4.333
+ACBABA: avgTT = 4.333
+ACBBAA: avgTT = 4.000
+BAAABC: avgTT = 5.000
+BAAACB: avgTT = 5.000
+BAABAC: avgTT = 5.000
+BAABCA: avgTT = 5.000
+BAACAB: avgTT = 5.000
+BAACBA: avgTT = 5.000
+BABAAC: avgTT = 4.667
+BABACA: avgTT = 4.667
+BABCAA: avgTT = 4.333
+BACAAB: avgTT = 4.667
+BACABA: avgTT = 4.667
+BACBAA: avgTT = 4.333
+BBAAAC: avgTT = 4.333
+BBAACA: avgTT = 4.333
+BBACAA: avgTT = 4.000
+BBCAAA: avgTT = 3.667
+BCAAAB: avgTT = 4.333
+BCAABA: avgTT = 4.333
+BCABAA: avgTT = 4.000
+BCBAAA: avgTT = 3.667
+CAAABB: avgTT = 3.667
+CAABAB: avgTT = 4.000
+CAABBA: avgTT = 4.000
+CABAAB: avgTT = 4.000
+CABABA: avgTT = 4.000
+CABBAA: avgTT = 3.667
+CBAAAB: avgTT = 4.000
+CBAABA: avgTT = 4.000
+CBABAA: avgTT = 3.667
+CBBAAA: avgTT = 3.333
