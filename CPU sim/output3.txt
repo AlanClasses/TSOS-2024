@@ -1,0 +1,387 @@
+./a.out debug
+Running in DEBUG mode.
+Processes:
+A of length 3 arriving at time 0
+B of length 2 arriving at time 1
+C of length 1 arriving at time 2
+
+Base execution timeline: AAABBC
+720 / 12 = 60 total permutations:
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AAABBC valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AAABCB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AAACBB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AABABC valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AABACB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AABBAC valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AABBCA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AABCAB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AABCBA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AACABB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AACBAB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+AACBBA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABAABC valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABAACB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABABAC valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABABCA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABACAB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABACBA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABBAAC valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABBACA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABBCAA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABCAAB valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABCABA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+ABCBAA valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+ACAABB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+ACABAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+ACABBA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+ACBAAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+ACBABA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+ACBBAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BAAABC NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BAAACB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BAABAC NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BAABCA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BAACAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BAACBA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BABAAC NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BABACA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BABCAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BACAAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BACABA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BACBAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BBAAAC NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BBAACA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BBACAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+BBCAAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+BCAAAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+BCAABA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+BCABAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+   NOT valid because process B cannot be scheduled at time 0.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 1.
+BCBAAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CAAABB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CAABAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CAABBA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CABAAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CABABA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CABBAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CBAAAB NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CBAABA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CBABAA NOT valid
+Checking process A for validity.
+Checking process B for validity.
+Checking process C for validity.
+   NOT valid because process C cannot be scheduled at time 0.
+CBBAAA NOT valid
+
+24 Valid Timelines:
+Turnaround time for process A:3
+Turnaround time for process B:4
+Turnaround time for process C:4
+AAABBC: avgTT = 3.667
+Turnaround time for process A:3
+Turnaround time for process B:5
+Turnaround time for process C:3
+AAABCB: avgTT = 3.667
+Turnaround time for process A:3
+Turnaround time for process B:5
+Turnaround time for process C:2
+AAACBB: avgTT = 3.333
+Turnaround time for process A:4
+Turnaround time for process B:4
+Turnaround time for process C:4
+AABABC: avgTT = 4.000
+Turnaround time for process A:4
+Turnaround time for process B:5
+Turnaround time for process C:3
+AABACB: avgTT = 4.000
+Turnaround time for process A:5
+Turnaround time for process B:3
+Turnaround time for process C:4
+AABBAC: avgTT = 4.000
+Turnaround time for process A:6
+Turnaround time for process B:3
+Turnaround time for process C:3
+AABBCA: avgTT = 4.000
+Turnaround time for process A:5
+Turnaround time for process B:5
+Turnaround time for process C:2
+AABCAB: avgTT = 4.000
+Turnaround time for process A:6
+Turnaround time for process B:4
+Turnaround time for process C:2
+AABCBA: avgTT = 4.000
+Turnaround time for process A:4
+Turnaround time for process B:5
+Turnaround time for process C:1
+AACABB: avgTT = 3.333
+Turnaround time for process A:5
+Turnaround time for process B:5
+Turnaround time for process C:1
+AACBAB: avgTT = 3.667
+Turnaround time for process A:6
+Turnaround time for process B:4
+Turnaround time for process C:1
+AACBBA: avgTT = 3.667
+Turnaround time for process A:4
+Turnaround time for process B:4
+Turnaround time for process C:4
+ABAABC: avgTT = 4.000
+Turnaround time for process A:4
+Turnaround time for process B:5
+Turnaround time for process C:3
+ABAACB: avgTT = 4.000
+Turnaround time for process A:5
+Turnaround time for process B:3
+Turnaround time for process C:4
+ABABAC: avgTT = 4.000
+Turnaround time for process A:6
+Turnaround time for process B:3
+Turnaround time for process C:3
+ABABCA: avgTT = 4.000
+Turnaround time for process A:5
+Turnaround time for process B:5
+Turnaround time for process C:2
+ABACAB: avgTT = 4.000
+Turnaround time for process A:6
+Turnaround time for process B:4
+Turnaround time for process C:2
+ABACBA: avgTT = 4.000
+Turnaround time for process A:5
+Turnaround time for process B:2
+Turnaround time for process C:4
+ABBAAC: avgTT = 3.667
+Turnaround time for process A:6
+Turnaround time for process B:2
+Turnaround time for process C:3
+ABBACA: avgTT = 3.667
+Turnaround time for process A:6
+Turnaround time for process B:2
+Turnaround time for process C:2
+ABBCAA: avgTT = 3.333
+Turnaround time for process A:5
+Turnaround time for process B:5
+Turnaround time for process C:1
+ABCAAB: avgTT = 3.667
+Turnaround time for process A:6
+Turnaround time for process B:4
+Turnaround time for process C:1
+ABCABA: avgTT = 3.667
+Turnaround time for process A:6
+Turnaround time for process B:3
+Turnaround time for process C:1
+ABCBAA: avgTT = 3.333

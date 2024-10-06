@@ -33,17 +33,20 @@ bool _DEBUG = false;
 bool checkTimelineValidity(Process processes[],
                            string  timeline)
 {
-   // A timeline is valid if it never trues to schedule a process into a time slot before it has arrived.
+   // A timeline is valid if it never tries to schedule a process into a time slot before it has arrived.
    bool isValid = true;
    // Iterate over all of the processes, checking the timeline validity for each.
    for (int i = 0; i < _NumProcesses; i++ ) {
       if (_DEBUG) {
-         cout << "Checking process " << processes[i].id << " for validity." << endl;
+         cout << "Checking process " << processes[i].id << " for validity. " << endl;
       };
       // If this process ID occurrs in the timeline BEFORE its arrival time then it's NOT VALID.
       for (int j = 0; j < processes[i].arrivalTime; j++) {
          if (timeline[j] == processes[i].id) {
             isValid = false;
+            if (_DEBUG) {
+               cout << "   NOT valid because process " << processes[i].id << " cannot be scheduled at time " << j << ". " << endl;
+            };
          }
       }
    }
@@ -98,12 +101,12 @@ int main(int argc, char* argv[])
    Process pB;
    pB.id          = 'B';
    pB.cycles      = 2;
-   pB.arrivalTime = 0;
+   pB.arrivalTime = 1;
 
    Process pC;
    pC.id          = 'C';
    pC.cycles      = 1;
-   pC.arrivalTime = 0;
+   pC.arrivalTime = 2;
 
    // Put those process structures in an array Processes.
    Process processes[_NumProcesses] = {pA, pB, pC};
