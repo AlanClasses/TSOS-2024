@@ -1,6 +1,8 @@
 //
-// CPU Scheduling Sim
+// CPU Scheduling Permutation Evaluator
 //
+
+// g++ -std=c++20 main.cpp
 
 #include <iostream>     // cout, endl
 using std::cout;
@@ -8,10 +10,9 @@ using std::endl;
 
 #include <iomanip>      // setprecision, ios
 using std::setprecision;
-
 using std::ios;         // I/O base class
 
-#include <string>       // string, rfind, to_string
+#include <string>       // string, to_string
 using std::string;
 using std::to_string;
 
@@ -52,14 +53,14 @@ bool checkTimelineValidity(Process processes[],
    for (int i = 0; i < _NumProcesses; i++ ) {
       if (_DEBUG) {
          cout << "Checking process " << processes[i].id << " for validity. " << endl;
-      };
-      // If this process ID occurrs in the timeline BEFORE its arrival time then it's NOT VALID.
+      }
+      // If this process ID occurs in the timeline BEFORE its arrival time then it's NOT VALID.
       for (int j = 0; j < processes[i].arrivalTime; j++) {
          if (timeline[j] == processes[i].id) {
             isValid = false;
             if (_DEBUG) {
                cout << "   NOT valid because process " << processes[i].id << " cannot be scheduled at time " << j << ". " << endl;
-            };
+            }
          }
       }
    }
@@ -67,44 +68,44 @@ bool checkTimelineValidity(Process processes[],
 }
 
 float calcAverageTurnaroundTime(Process processes[],
-                                string  timeline) {
-   float ttSum = 0.0;
+                                const string& timeline) {
+   u_long ttSum = 0;
    // Iterate over all of the processes, computing the turnaround time for each.
    for (int i = 0; i < _NumProcesses; i++ ) {
       // Find the LAST occurrence of this process's ID in the timeline string.
-      int finishTime = timeline.rfind(processes[i].id);
+      u_long finishTime = timeline.rfind(processes[i].id);
       // Subtract if from the arrival time, and avoid an off-by-one error.
-      int turnaroundTime = (finishTime - processes[i].arrivalTime) + 1; // +1 because time slot 0 counts.
+      u_long turnaroundTime = (finishTime - processes[i].arrivalTime) + 1; // +1 because time slot 0 counts.
       if (_DEBUG) {
          cout << "Turnaround time for process " << processes[i].id << ":" << turnaroundTime << endl;
-      };
+      }
       // Accumulate the sum so we can compute the average later.
       ttSum += turnaroundTime;
-   };
-   return (ttSum / _NumProcesses);
+   }
+   return (static_cast<float>(ttSum) / _NumProcesses);
 }
 
 float calcAverageWaitTime(Process processes[],
                           string  timeline) {
-   float wtSum = 0.0;
+   u_long wtSum = 0;
    // Iterate over all of the processes, computing the wait time for each.
    for (int i = 0; i < _NumProcesses; i++ ) {
       int waitTime = 0;
       // Find the LAST occurrence of this process's ID in the timeline string.
-      int finishTimeIndex = timeline.rfind(processes[i].id);
+      u_long finishTimeIndex = timeline.rfind(processes[i].id);
       // Count the time slots from process arrival time to its finish where this process ID is NOT executing (and therefore ready/waiting).
       for (int j = processes[i].arrivalTime; j < finishTimeIndex; j++) {
-          if (timeline[j] != processes[i].id) {
-             waitTime++;
-          };
-      };
+         if (timeline[j] != processes[i].id) {
+            waitTime++;
+         }
+      }
       if (_DEBUG) {
          cout << "Wait time for process " << processes[i].id << ":" << waitTime << endl;
-      };
+      }
       // Accumulate the sum so we can compute the average later.
       wtSum += waitTime;
    }
-   return (wtSum / _NumProcesses);
+   return (static_cast<float>(wtSum) / _NumProcesses);
 }
 
 
@@ -119,7 +120,7 @@ int main(int argc, char* argv[])
 
    // Check the command line args.
    // Note: argv[0] is the executable name. The parameters begin with index 1.
-   if (argc >= 2) {    
+   if (argc >= 2) {
       if (strcmp(argv[1],"debug") == 0) {  // Needing strcmp() here instead of just == is why people hate C++.
          _DEBUG = true;
          cout << "Running in DEBUG mode." << endl;
@@ -132,19 +133,19 @@ int main(int argc, char* argv[])
    } // end if
 
    // Define processes. TODO: Make dynamic. Read from a file.
-   Process pA;
+   Process pA{};
    pA.id          = 'A';
-   pA.cycles      = 3;
+   pA.cycles      = 4;
    pA.arrivalTime = 0;
 
-   Process pB;
+   Process pB{};
    pB.id          = 'B';
-   pB.cycles      = 2;
+   pB.cycles      = 4;
    pB.arrivalTime = 1;
 
-   Process pC;
+   Process pC{};
    pC.id          = 'C';
-   pC.cycles      = 1;
+   pC.cycles      = 4;
    pC.arrivalTime = 2;
 
    // Put those process structures in an array Processes.
@@ -152,24 +153,24 @@ int main(int argc, char* argv[])
 
    // Other initializations
    string timeline = "";
-   int denominator = 1;
+   double denominator = 1;
    vector<string> validTimelines;
 
    // Display the processes.
    cout << "Processes:" << endl;
-      for (int i = 0; i < 3; i++) {
-      cout << processes[i].id << " of length " << processes[i].cycles << " arriving at time " << processes[i].arrivalTime << endl;
-      for (int j = 0; j < processes[i].cycles; j++) {
-         timeline += processes[i].id;
-      };
-      denominator =  denominator * tgamma( processes[i].cycles+1 );
+   for (auto & process : processes) {
+      cout << process.id << " of length " << process.cycles << " arriving at time " << process.arrivalTime << endl;
+      for (int j = 0; j < process.cycles; j++) {
+         timeline += process.id;
+      }
+      denominator =  denominator * tgamma( process.cycles+1 );
    }
    cout << endl;
 
    cout << "Execution timeline ingredients: " << timeline << endl;
 
    // How many unique TOTAL permutations are there?
-   int numerator = tgamma( timeline.length()+1 );  // denominator declared and computed above.
+   double numerator = tgamma( timeline.length()+1 );  // denominator declared and computed above.
    cout << numerator << " / " << denominator << " = " << (numerator/denominator) << " total permutations:" << endl;
    bool timelineIsValid = true;
    bool thereAreMorePermutations = true;
@@ -191,29 +192,29 @@ int main(int argc, char* argv[])
 
    // Output the results.
    vector<string> CSVdata;
-   CSVdata.push_back("timeline,avg_tt,avg_wt");
-   
+   CSVdata.emplace_back("timeline,avg_tt,avg_wt");
+
    float avgTurnaroundTime = 0.0;
    float avgWaitTime       = 0.0;
    cout << validTimelines.size() << " Valid Timelines:" << endl;
-   for (int i = 0; i < validTimelines.size(); i++) {
-      avgTurnaroundTime = calcAverageTurnaroundTime(processes, validTimelines[i]);
-      avgWaitTime       = calcAverageWaitTime(processes, validTimelines[i]);
-      cout << validTimelines[i] << ": avgTT = " << setprecision(3) << avgTurnaroundTime 
-                                << "  avgWT = " << avgWaitTime << endl;
+   for (auto & validTimeline : validTimelines) {
+      avgTurnaroundTime = calcAverageTurnaroundTime(processes, validTimeline);
+      avgWaitTime       = calcAverageWaitTime(processes, validTimeline);
+      cout << validTimeline << ": avgTT = " << setprecision(3) << avgTurnaroundTime
+           << "  avgWT = " << avgWaitTime << endl;
       if (_CSV) {
-         CSVdata.push_back( validTimelines[i] + "," + to_string(avgTurnaroundTime) + "," + to_string(avgWaitTime) );
-      };
-   };
-   
+         CSVdata.push_back( validTimeline + "," + to_string(avgTurnaroundTime) + "," + to_string(avgWaitTime) );
+      }
+   }
+
    // Output the CSV results if necessary.
    if (_CSV) {
-       cout << endl << endl;
-       for (int i = 0; i < CSVdata.size(); i++) {
-           cout << CSVdata[i] << endl;
-       }
+      cout << endl << endl;
+      for (auto & line : CSVdata) {
+         cout << line << endl;
+      }
    }
-   
+
 
    return retCode;
 }
