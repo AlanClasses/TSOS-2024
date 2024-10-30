@@ -135,17 +135,17 @@ int main(int argc, char* argv[])
    // Define processes. TODO: Make dynamic. Read from a file.
    Process pA{};
    pA.id          = 'A';
-   pA.cycles      = 4;
+   pA.cycles      = 3;
    pA.arrivalTime = 0;
 
    Process pB{};
    pB.id          = 'B';
-   pB.cycles      = 4;
+   pB.cycles      = 1;
    pB.arrivalTime = 1;
 
    Process pC{};
    pC.id          = 'C';
-   pC.cycles      = 4;
+   pC.cycles      = 2;
    pC.arrivalTime = 2;
 
    // Put those process structures in an array Processes.
@@ -214,7 +214,6 @@ int main(int argc, char* argv[])
          cout << line << endl;
       }
    }
-
 
    return retCode;
 }
